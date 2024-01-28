@@ -13,7 +13,6 @@ export const getBarang = (result) => {
   });
 };
 
-
 //get one "barang"
 export const getBarangById = (id, result) => {
   db.query("SELECT * FROM barang WHERE KodeBarang = ?", [id], (err, results) => {

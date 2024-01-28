@@ -35,7 +35,7 @@ export const addBarang = (req, res) => {
   });
 };
 
-// Update "barang"
+//update "barang"
 export const updateBarang = (req, res) => {
   const data = req.body;
   const id = req.params.id;
