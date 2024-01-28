@@ -3,7 +3,7 @@ import {
     getKasir,    
 } from "../models/kasirModels.js";
   
-//get all "barang"
+//get all "kasir"
 export const showKasir = (req, res) => {
     getKasir((err, results) => {
       if (err) {
