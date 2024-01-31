@@ -3,6 +3,8 @@ import express from "express";
 import { addBarang, deleteBarang, showBarang, showBarangById, updateBarang } from "../controllers/barang.js";
 import { addKasir, deleteKasir, showKasir, showKasirById, updateKasir } from "../controllers/kasir.js";
 import { addTenan, deleteTenan, showTenan, showTenanById, updateTenan } from "../controllers/tenan.js";
+import { addNota, deleteNota, showNota, showNotaById, updateNota } from "../controllers/nota.js";
+import { addBarangNota, deleteBarangNota, showBarangNota, showBarangNotaById, updateBarangNota } from "../controllers/barangnota.js";
 
 const router = express.Router();
 
@@ -41,5 +43,31 @@ router.post("/insert/tenan", addTenan);
 router.put("/update/tenan/:id", updateTenan);
 //delete "tenan"
 router.delete("/delete/tenan/:id", deleteTenan);
+
+//endpoint NOTA
+//get all "nota"
+router.get("/nota", showNota);
+//get one "nota"
+router.get("/nota/:id", showNotaById);
+//insert "nota"
+router.post("/insert/nota", addNota);
+//update "nota"
+router.put("/update/nota/:id", updateNota);
+//delete "nota"
+router.delete("/delete/nota/:id", deleteNota);
+
+//endpoint BARANGNOTA
+//get all "barangnota"
+router.get("/barangnota", showBarangNota);
+//get one "barangnota"
+router.get("/barangnota/:id", showBarangNotaById);
+//insert "barangnota"
+router.post("/insert/barangnota", addBarangNota);
+//update "barangnota"
+router.put("/update/barangnota/:id", updateBarangNota);
+//delete "barangnota"
+router.delete("/delete/barangnota/:id", deleteBarangNota);
+
+
 
 export default router;
